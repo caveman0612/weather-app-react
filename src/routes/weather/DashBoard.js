@@ -27,7 +27,7 @@ const DashBoard = ({ apiData }) => {
   }
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 pb-5">
       <h1 className="text-center">The weather in {apiData.name}</h1>
       <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 gy-5">
         <div className="col border p-4 d-flex flex-column align-items-center">

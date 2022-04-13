@@ -14,7 +14,7 @@ const Weather = () => {
 
   const [apiData, setApiData] = useState(dumbyData);
   const [formData, setFormData] = useState(_initialFormState);
-  const [searchType, setSearchType] = useState("city");
+  const [searchType, setSearchType] = useState("zip");
   const [searchObj, setSearchObj] = useState(null);
 
   function changeHandler(event) {
@@ -36,8 +36,6 @@ const Weather = () => {
   useEffect(() => {
     const controller = new AbortController();
     if (searchObj) {
-      // console.log(searchObj);
-
       if (searchObj.type === "city") {
         console.log("api call", process.env.REACT_APP_WEATHER_API_KEY);
         const URL = `https://api.openweathermap.org/data/2.5/weather?q=${searchObj.city}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`;

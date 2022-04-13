@@ -65,8 +65,8 @@ const SearchField = ({
       {/* <span>Search</span> */}
       <select onChange={searchChangeHandler} className="m-3">
         {/* <option value="">--Search Type--</option> */}
-        <option value="city">Search by City</option>
         <option value="zip"> Search by Zip</option>
+        <option value="city">Search by City</option>
         <option value="lat/lon">Search by Lat/Lon</option>
       </select>
       <form
